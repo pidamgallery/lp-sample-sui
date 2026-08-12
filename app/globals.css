@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600&display=swap');
+
+:root { --ivory:#f6f2eb; --green:#53665a; --deep:#33453a; --wine:#7a3f4b; --ink:#33332f; --sand:#dccfc0; --white:#fffdf9; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--ink); background:var(--ivory); font-family:"Noto Sans JP",sans-serif; font-weight:300; line-height:1.9; letter-spacing:.04em; }
+a { color:inherit; text-decoration:none; }
+button { font:inherit; }
+.sample-bar { background:var(--deep); color:#fff; padding:7px 20px; text-align:center; font-size:11px; letter-spacing:.12em; }
+.site-header { height:86px; display:flex; align-items:center; justify-content:space-between; padding:0 5vw; background:rgba(246,242,235,.95); position:relative; z-index:10; }
+.brand { display:flex; flex-direction:column; align-items:center; line-height:1; color:var(--deep); }
+.brand span { font:600 34px/1 "Cormorant Garamond",serif; letter-spacing:.16em; }
+.brand small { font-size:8px; letter-spacing:.34em; margin-top:5px; }
+nav { display:flex; gap:36px; font:500 11px/1 "Cormorant Garamond",serif; letter-spacing:.18em; }
+nav a { position:relative; padding:10px 0; }
+nav a:after { content:""; position:absolute; left:0; bottom:3px; width:0; height:1px; background:var(--wine); transition:.3s; }
+nav a:hover:after { width:100%; }
+.header-cta { background:var(--wine); color:#fff; padding:14px 24px; font-size:12px; letter-spacing:.1em; }
+.hero { min-height:calc(100vh - 115px); position:relative; display:grid; grid-template-columns:43% 57%; background:var(--white); overflow:hidden; }
+.hero-copy { z-index:2; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:8vw 3vw 8vw 8vw; }
+.eyebrow { margin:0 0 23px; color:var(--green); font:600 12px/1 "Cormorant Garamond",serif; letter-spacing:.26em; }
+.eyebrow:before { content:""; display:inline-block; width:35px; height:1px; margin:0 13px 4px 0; background:currentColor; }
+.hero h1 { margin:0; font:500 clamp(42px,4.2vw,72px)/1.42 "Noto Serif JP",serif; letter-spacing:.08em; color:var(--deep); }
+.hero-heading span,.reservation-heading span { display:block; white-space:nowrap; }
+.hero-lead { margin:34px 0; font-size:14px; line-height:2.25; }
+.primary-button { width:275px; padding:18px 21px; background:var(--wine); color:#fff; display:flex; align-items:center; justify-content:space-between; font-size:13px; box-shadow:0 12px 32px rgba(122,63,75,.18); transition:.25s; }
+.primary-button:hover { transform:translateY(-2px); background:#69333f; }
+.primary-button b { font-size:18px; font-weight:300; }
+.hero-image { min-height:620px; background:url('/sui-hero.jpg') center right/cover no-repeat, linear-gradient(135deg,#ded4c6,#819184); }
+.hero-note { position:absolute; right:26px; bottom:16px; color:white; font:500 9px/1 "Cormorant Garamond",serif; letter-spacing:.18em; text-shadow:0 1px 4px #333; }
+.mobile-only { display:none; }
+.section { padding:120px max(7vw,40px); }
+.intro { display:grid; grid-template-columns:1fr 1fr; gap:10vw; align-items:center; }
+.section-heading h2,.center-heading h2,.menu-panel h2,.stylist h2,.reservation h2,.access h2 { margin:0; color:var(--deep); font:500 clamp(30px,3vw,48px)/1.65 "Noto Serif JP",serif; letter-spacing:.06em; }
+.intro-heading span,.stylist-heading span { display:block; white-space:nowrap; }
+.mobile-phrase { display:none!important; }
+.intro-copy { font-size:15px; }
+.intro-copy p { margin:0 0 24px; }
+.signature { margin-top:34px; color:var(--wine); font:italic 30px/1 "Cormorant Garamond",serif; }
+.reasons { background:var(--white); }
+.center-heading { text-align:center; max-width:700px; margin:0 auto 68px; }
+.center-heading .eyebrow:before { display:none; }
+.center-heading > p:last-child { margin-top:18px; font-size:14px; }
+.reason-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; max-width:1180px; margin:auto; }
+.reason-card { position:relative; }
+.reason-number { position:absolute; z-index:2; top:-14px; left:16px; color:var(--wine); font:500 36px/1 "Cormorant Garamond",serif; }
+.reason-visual { height:290px; overflow:hidden; position:relative; background-color:#d8d0c4; background-position:center; background-size:cover; }
+.reason-visual:after { content:""; position:absolute; inset:0; background:linear-gradient(180deg,transparent 68%,rgba(39,54,45,.14)); pointer-events:none; }
+.visual-01 { background-image:url('/feature-counseling.jpg'); }
+.visual-02 { background-image:url('/feature-glossy-hair.jpg'); }
+.visual-03 { background-image:url('/feature-salon-interior.jpg'); }
+.reason-card h3 { font:500 19px/1.6 "Noto Serif JP",serif; margin:25px 0 10px; }
+.reason-card p { margin:0; font-size:13px; line-height:2; }
+.menu-section { background:linear-gradient(90deg,#45594c 0 68%,#e5dbce 68%); }
+.menu-panel { max-width:1100px; margin:auto; color:#fff; display:grid; grid-template-columns:1.1fr .9fr; gap:8vw; align-items:center; }
+.light,.menu-panel h2,.reservation h2 { color:#fff; }
+.menu-description { max-width:500px; }
+.menu-panel ul { display:flex; flex-wrap:wrap; gap:9px; padding:0; list-style:none; }
+.menu-panel li { border:1px solid rgba(255,255,255,.4); padding:7px 13px; font-size:12px; }
+.price-box { background:var(--white); color:var(--ink); padding:45px; box-shadow:0 25px 70px rgba(31,49,37,.24); }
+.price-box > p { color:var(--wine); font-weight:500; letter-spacing:.15em; }
+.price-box div { display:flex; flex-direction:column; border-bottom:1px solid var(--sand); padding-bottom:20px; margin-bottom:20px; }
+.price-box del { font-size:12px; }
+.price-box strong { color:var(--wine); font:600 52px/1.2 "Cormorant Garamond",serif; }
+.price-box strong small { font:400 12px/1 "Noto Sans JP",sans-serif; margin-left:4px; }
+.price-box > span,.price-box > small { display:block; font-size:11px; margin-top:8px; }
+.flow { display:grid; grid-template-columns:.7fr 1.3fr; gap:10vw; background:var(--ivory); }
+.compact { align-self:start; position:sticky; top:30px; }
+.steps { border-top:1px solid #beb8ae; }
+.step { display:grid; grid-template-columns:50px 1fr; gap:25px; padding:30px 0; border-bottom:1px solid #beb8ae; }
+.step > span { color:var(--wine); font:500 22px/1.4 "Cormorant Garamond",serif; }
+.step h3 { margin:0 0 6px; font:500 18px/1.5 "Noto Serif JP",serif; }
+.step p { margin:0; font-size:13px; }
+.stylist { display:grid; grid-template-columns:42% 1fr; gap:9vw; align-items:center; background:var(--white); }
+.stylist-portrait { height:560px; background:#b8aa99 url('/stylist-shiori.jpg') center 24%/cover no-repeat; }
+.stylist-copy > p { max-width:650px; }
+.stylist-heading { font-size:clamp(30px,2.65vw,42px)!important; letter-spacing:.035em!important; }
+.stylist-name { margin-top:38px; display:grid; grid-template-columns:auto 1fr; gap:3px 20px; align-items:end; }
+.stylist-name small { grid-column:1; color:var(--green); font:500 11px/1 "Cormorant Garamond",serif; letter-spacing:.15em; }
+.stylist-name strong { grid-column:1; font:500 20px/1.5 "Noto Serif JP",serif; }
+.stylist-name em { grid-column:2; grid-row:2; font-size:10px; color:#777; }
+.faq { max-width:1000px; margin:auto; }
+.faq-list { border-top:1px solid #bbb4aa; }
+details { border-bottom:1px solid #bbb4aa; padding:23px 5px; }
+summary { cursor:pointer; list-style:none; font:500 15px/1.7 "Noto Serif JP",serif; padding-right:45px; position:relative; }
+summary:after { content:"＋"; position:absolute; right:5px; color:var(--wine); font-size:20px; }
+details[open] summary:after { content:"−"; }
+details p { margin:16px 0 0; font-size:13px; color:#555; }
+.reservation { text-align:center; color:white; background:var(--green); }
+.reservation > p:not(.eyebrow) { font-size:13px; margin:20px 0 28px; }
+.reservation-button { min-width:340px; background:var(--wine); color:white; border:1px solid rgba(255,255,255,.4); padding:19px 24px; display:inline-flex; justify-content:space-between; gap:40px; align-items:center; opacity:1; cursor:not-allowed; }
+.reservation-button b { font-size:9px; background:rgba(255,255,255,.16); padding:4px 7px; font-weight:400; }
+.access { display:grid; grid-template-columns:1fr 1fr; gap:8vw; background:var(--white); }
+.access h2 { font:600 54px/1 "Cormorant Garamond",serif; letter-spacing:.13em; }
+.access h2 small { font-size:16px; letter-spacing:.06em; }
+dl { margin-top:38px; }
+dl div { display:grid; grid-template-columns:100px 1fr; padding:13px 0; border-bottom:1px solid #ddd4c9; font-size:12px; }
+dt { font-weight:500; }
+dd { margin:0; }
+.fiction-note { font-size:10px; margin-top:20px; }
+.map-placeholder { min-height:390px; background:#ded8cc; position:relative; overflow:hidden; }
+.map-lines { position:absolute; inset:-20%; background:repeating-linear-gradient(32deg,transparent 0 65px,rgba(83,102,90,.2) 66px 70px),repeating-linear-gradient(115deg,transparent 0 105px,rgba(255,255,255,.7) 106px 114px); transform:rotate(-5deg); }
+.map-pin { position:absolute; top:48%; left:52%; transform:translate(-50%,-50%); width:84px; height:84px; border-radius:50% 50% 50% 0; rotate:-45deg; background:var(--wine); color:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; font:600 24px/1 "Cormorant Garamond",serif; }
+.map-pin small { font-size:7px; margin-top:4px; }.map-pin>* ,.map-pin { }.map-pin { line-height:1; }.map-pin::first-line { rotate:45deg; }
+footer { text-align:center; padding:65px 20px 80px; background:#293a30; color:#fff; }
+.footer-brand { color:#fff; width:max-content; margin:auto; }
+footer p { font-size:11px; margin:25px 0 4px; }
+footer > small { font-size:9px; opacity:.7; }
+.mobile-cta { display:none; }
+
+@media (max-width:800px) {
+  body { padding-bottom:60px; }
+  .sample-bar { font-size:9px; padding:6px 10px; }
+  .site-header { height:68px; padding:0 20px; }
+  .brand span { font-size:27px; }
+  nav,.header-cta { display:none; }
+  .hero { min-height:auto; display:flex; flex-direction:column; }
+  .hero-image { order:1; min-height:50vh; background-position:65% center; }
+  .hero-copy { order:2; padding:42px 25px 55px; }
+  .hero .eyebrow { margin-bottom:16px; }
+  .hero h1 { font-size:clamp(31px,8.4vw,35px); line-height:1.55; letter-spacing:.045em; }
+  .hero-lead { margin:24px 0; font-size:12px; line-height:2.1; }
+  .primary-button { width:100%; }
+  .hero-note { top:calc(50vh - 20px); bottom:auto; right:10px; font-size:7px; }
+  .mobile-only { display:block; }
+  .section { padding:78px 24px; }
+  .intro,.flow,.stylist,.access { grid-template-columns:1fr; gap:45px; }
+  .section-heading h2,.center-heading h2,.menu-panel h2,.stylist h2,.reservation h2 { font-size:28px; }
+  .intro-heading,.stylist-heading { font-size:clamp(24px,7vw,28px)!important; line-height:1.75!important; letter-spacing:.025em!important; }
+  .stylist-heading { font-size:clamp(19px,5.35vw,21px)!important; line-height:1.9!important; }
+  .desktop-phrase { display:none!important; }
+  .mobile-phrase { display:block!important; }
+  .intro-copy { font-size:13px; }
+  .reason-grid { grid-template-columns:1fr; gap:55px; }
+  .center-heading { margin-bottom:48px; }
+  .reason-visual { height:260px; }
+  .menu-section { background:var(--green); }
+  .menu-panel { grid-template-columns:1fr; gap:35px; }
+  .price-box { padding:32px 25px; }
+  .price-box strong { font-size:46px; }
+  .compact { position:static; }
+  .step { grid-template-columns:40px 1fr; gap:12px; }
+  .stylist-portrait { height:440px; background-position:center 20%; }
+  .reservation-heading { font-size:clamp(23px,6.5vw,27px)!important; line-height:1.75!important; letter-spacing:.02em!important; }
+  .reservation-button { min-width:0; width:100%; gap:8px; padding:16px 14px; font-size:12px; }
+  .access-info { order:1; }.map-placeholder { order:2; min-height:300px; }
+  dl div { grid-template-columns:76px 1fr; gap:8px; }
+  .mobile-cta { display:flex; position:fixed; z-index:20; left:0; right:0; bottom:0; height:60px; padding:0 22px; align-items:center; justify-content:space-between; background:var(--wine); color:#fff; font-size:12px; box-shadow:0 -6px 20px rgba(56,35,39,.16); }
+}
+
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none!important; } }
