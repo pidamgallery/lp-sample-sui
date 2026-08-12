@@ -48,6 +48,9 @@ yarn-error.log*
 /local-final-check.html
 /sui-preview*.log
 
+# GitHub Pages output is intentionally tracked
+!/docs/
+
 # starter-only folders not used by this one-page sample
 /db/
 /drizzle/

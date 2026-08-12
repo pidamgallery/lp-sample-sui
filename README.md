@@ -1,5 +1,7 @@
 # SUI hair salon — LP制作例
 
+公開ページ：<https://pidamgallery.github.io/lp-sample-sui/>
+
 Pidam Galleryが制作した、架空の美容室「SUI hair salon」のランディングページです。
 
 ランサーズのLP制作パッケージやポートフォリオで、制作可能なデザインとページ構成を具体的に紹介するためのサンプルとして制作しました。
